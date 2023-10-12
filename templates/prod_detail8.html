@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0071)https://template.hasthemes.com/olivine/olivine/shop-single-product.html -->
+<!-- saved from url=(0071)https://template.hasthemes.com/ Trea beaux / Trea beaux /shop-single-product.html -->
 <html lang="en" class=" video no-touchevents csstransitions no-videoautoplay"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -102,21 +102,9 @@
                 </ul>
               </div>
               <div class="header-action-area">
-                <div class="header-action-search header-search-rs">
-                  <div class="btn-search-content">
-                    <form action="#" method="post">
-                      <div class="form-input-item">
-                        <label for="search" class="sr-only">Search our store</label>
-                        <input type="text" id="search" placeholder="Search our store">
-                        <button type="submit" class="btn-src">
-                          <i class="icofont-search-1"></i>
-                        </button>
-                      </div>
-                    </form>
-                  </div>
-                </div>
+               
                 <div class="header-action-cart">
-                  <a class="cart-icon" href="javascript:void(0);">
+                  <a class="cart-icon" href="/cart">
                     <i class="icofont-shopping-cart"></i>
                   </a>
                 </div>
@@ -193,7 +181,19 @@
                     <span class="qty-title">Quantity:</span>
                     <div class="pro-qty">
                       <input type="text" id="quantity" title="Quantity" value="1">
-                    <a href="#" class="inc qty-btn">+</a><a href="#" class="dec qty-btn">-</a></div>
+                      <button class="inc qty-btn" id="inc">+</button>
+                      <button  class="dec qty-btn" id="dec">-</button></div>
+                      <script type="text/javascript">
+                        document.getElementById('inc').onclick = function () {
+                            document.getElementById('quantity').value++;
+                        };
+                        document.getElementById('dec').onclick = function () {
+                            document.getElementById('quantity').value--;
+                            if (document.getElementById('quantity').value == 0) {
+                                document.getElementById('quantity').value = 1;
+                            }
+                        };
+                    </script>
                   </div>
                   <a class="btn-theme" href="/checkout">Buy it now</a>
                 </div>
@@ -255,10 +255,7 @@
               <br><br>
               <div class="widget-menu-wrap">
                 <ul class="nav-menu">
-                  <li><a href="/home#aboutus">About Us</a></li>
-                  <li><a href="#">FAQ</a></li>
-                  <li><a href="#">Help</a></li>
-                  <li><a href="#">Shipping &amp; Return</a></li>
+                 
                 </ul>
               </div>
             </div>
@@ -281,12 +278,7 @@
 
             <div class="col-md-6">
               <div class="widget-bottom-menu-wrap">
-                <ul class="nav-menu">
-                  <li><a href="#">Terms</a></li>
-                  <li><a href="#">Privacy</a></li>
-                  <li><a href="#">License</a></li>
-                </ul>
-              </div>
+                            </div>
             </div>
           </div>
         </div>
@@ -302,7 +294,7 @@
   <aside class="sidebar-cart-modal">
     <div class="sidebar-cart-inner">
       <div class="sidebar-cart-content">
-        <a class="cart-close" href="javascript:void(0);"><i class="icofont-close-line"></i></a>
+        <a class="cart-close" href="/cart"><i class="icofont-close-line"></i></a>
         <div class="sidebar-cart">
           <h4 class="sidebar-cart-title">Shopping Cart</h4>
           <div class="product-cart">
@@ -344,7 +336,7 @@
   <aside class="sidebar-cart-modal">
     <div class="sidebar-cart-inner">
       <div class="sidebar-cart-content">
-        <a class="cart-close" href="javascript:void(0);"><i class="icofont-close-line"></i></a>
+        <a class="cart-close" href="/cart"><i class="icofont-close-line"></i></a>
         <div class="sidebar-cart">
           <h4 class="sidebar-cart-title">Shopping Cart</h4>
           <div class="product-cart">

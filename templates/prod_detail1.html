@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0071)https://template.hasthemes.com/olivine/olivine/shop-single-product.html -->
+<!-- saved from url=(0071)https://template.hasthemes.com/ Trea beaux / Trea beaux /shop-single-product.html -->
 <html lang="en" class=" video no-touchevents csstransitions no-videoautoplay"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -75,7 +75,7 @@
         <div class="row align-items-center">
           <div class="col-5 col-sm-3 col-md-3 col-lg-2">
             <div class="header-logo-area">
-              <a href="https://template.hasthemes.com/olivine/olivine/index.html">
+              <a href="#">
                 <img class="logo-main" src="static/home_files/logo.jpg" alt="Logo" style="width: 30%;">
                 <img class="logo-light" src="static/home_files/logo.jpg" alt="Logo" style="width: 30%;">
               </a>
@@ -102,21 +102,9 @@
                 </ul>
               </div>
               <div class="header-action-area">
-                <div class="header-action-search header-search-rs">
-                  <div class="btn-search-content">
-                    <form action="#" method="post">
-                      <div class="form-input-item">
-                        <label for="search" class="sr-only">Search our store</label>
-                        <input type="text" id="search" placeholder="Search our store">
-                        <button type="submit" class="btn-src">
-                          <i class="icofont-search-1"></i>
-                        </button>
-                      </div>
-                    </form>
-                  </div>
-                </div>
+               
                 <div class="header-action-cart">
-                  <a class="cart-icon" href="javascript:void(0);">
+                  <a class="cart-icon" href="/cart">
                     <i class="icofont-shopping-cart"></i>
                   </a>
                 </div>
@@ -142,7 +130,7 @@
           <div class="col-lg-12">
             <div class="page-title-content">
               <h2 class="title">Thousand Wishes Super Smooth Shampoo</h2>
-              <div class="bread-crumbs"><a href="https://template.hasthemes.com/olivine/olivine/index.html">Home<span class="breadcrumb-sep">&gt;</span></a><span class="active">Thousand Wishes Super Smooth Shampoo</span></div>
+              <div class="bread-crumbs"><a href="#">Home<span class="breadcrumb-sep">&gt;</span></a><span class="active">Thousand Wishes Super Smooth Shampoo</span></div>
             </div>
           </div>
         </div>
@@ -196,7 +184,21 @@
                     <span class="qty-title">Quantity:</span>
                     <div class="pro-qty">
                       <input type="text" id="quantity" title="Quantity" value="1">
-                    <a href="#" class="inc qty-btn">+</a><a href="#" class="dec qty-btn">-</a></div>
+                      <button class="inc qty-btn" id="inc">+</button>
+                      <button  class="dec qty-btn" id="dec">-</button></div>
+                      <script type="text/javascript">
+                        document.getElementById('inc').onclick = function () {
+                            document.getElementById('quantity').value++;
+                        };
+                        document.getElementById('dec').onclick = function () {
+                            document.getElementById('quantity').value--;
+                            if (document.getElementById('quantity').value == 0) {
+                                document.getElementById('quantity').value = 1;
+                            }
+                        };
+                    </script>
+                    </div>
+                  </div>
                   </div>
                   <a class="btn-theme" href="/checkout">Buy it now</a>
                 </div>
@@ -263,7 +265,7 @@
           <div class="col-lg-8 m-auto">
             <div class="widget-item text-center">
               <div class="widget-logo-area">
-                <a href="https://template.hasthemes.com/olivine/olivine/index.html">
+                <a href="#">
                   <img class="logo-main" src="static/home_files/logo.jpg" alt="Logo" style="width: 30%;">
                 </a>
               </div>
@@ -274,10 +276,6 @@
               <br><br>
               <div class="widget-menu-wrap">
                 <ul class="nav-menu">
-                  <li><a href="/home#aboutus">About Us</a></li>
-                  <li><a href="#">FAQ</a></li>
-                  <li><a href="#">Help</a></li>
-                  <li><a href="#">Shipping &amp; Return</a></li>
                 </ul>
               </div>
             </div>
@@ -300,12 +298,7 @@
 
             <div class="col-md-6">
               <div class="widget-bottom-menu-wrap">
-                <ul class="nav-menu">
-                  <li><a href="#">Terms</a></li>
-                  <li><a href="#">Privacy</a></li>
-                  <li><a href="#">License</a></li>
-                </ul>
-              </div>
+                            </div>
             </div>
           </div>
         </div>
@@ -318,102 +311,11 @@
   <div class="scroll-to-top"><span class="fa fa-angle-double-up"></span></div>
 
   <!--== Start Quick View Menu ==-->
-  <aside class="product-quick-view-modal">
-    <div class="product-quick-view-inner">
-      <div class="product-quick-view-content">
-        <button type="button" class="btn-close">
-          <span class="close-icon"><i class="fa fa-times-circle"></i></span>
-        </button>
-        <div class="row">
-          <div class="col-lg-6 col-md-6 col-12">
-            <div class="thumb">
-              <img src="static/prod_detail_files/quick-view1.webp" alt="Olivine-Shop">
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-6 col-12">
-            <div class="content">
-              <h4 class="title">Product dummy title</h4>
-              <div class="prices">
-                <del class="price-old">$167.540</del>
-                <span class="price">$141.76</span>
-              </div>
-              <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,</p>
-              <div class="quick-view-select">
-                <div class="quick-view-select-item">
-                  <label for="forSize" class="form-label">Size:</label>
-                  <select class="form-select" id="forSize" required="">
-                    <option selected="" value="">s</option>
-                    <option>m</option>
-                    <option>l</option>
-                    <option>xl</option>
-                  </select>
-                </div>
-                <div class="quick-view-select-item">
-                  <label for="forColor" class="form-label">Color:</label>
-                  <select class="form-select" id="forColor" required="">
-                    <option selected="" value="">red</option>
-                    <option>green</option>
-                    <option>blue</option>
-                    <option>yellow</option>
-                    <option>white</option>
-                  </select>
-                </div>
-              </div>
-              <div class="action-top">
-                <div class="pro-qty">
-                  <input type="text" id="quantity2" title="Quantity" value="1">
-                <a href="#" class="inc qty-btn">+</a><a href="#" class="dec qty-btn">-</a></div>
-                <button class="btn btn-black">Add to cart</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="canvas-overlay"></div>
-  </aside>
+ 
   <!--== End Quick View Menu ==-->
 
   <!--== Start Sidebar Cart Menu ==-->
-  <aside class="sidebar-cart-modal">
-    <div class="sidebar-cart-inner">
-      <div class="sidebar-cart-content">
-        <a class="cart-close" href="javascript:void(0);"><i class="icofont-close-line"></i></a>
-        <div class="sidebar-cart">
-          <h4 class="sidebar-cart-title">Shopping Cart</h4>
-          <div class="product-cart">
-            <div class="product-cart-item">
-              <div class="product-img">
-                <a href="https://template.hasthemes.com/olivine/olivine/shop.html"><img src="static/prod_detail_files/1(1).webp" alt=""></a>
-              </div>
-              <div class="product-info">
-                <h4 class="title"><a href="https://template.hasthemes.com/olivine/olivine/shop.html">Product title here</a></h4>
-                <span class="info">1 × $50.00</span>
-              </div>
-              <div class="product-delete"><a href="#/">×</a></div>
-            </div>
-            <div class="product-cart-item">
-              <div class="product-img">
-                <a href="https://template.hasthemes.com/olivine/olivine/shop.html"><img src="static/prod_detail_files/2.webp" alt=""></a>
-              </div>
-              <div class="product-info">
-                <h4 class="title"><a href="https://template.hasthemes.com/olivine/olivine/shop.html">Product dummy title - s</a></h4>
-                <span class="info">1 × $79.00</span>
-              </div>
-              <div class="product-delete"><a href="#/">×</a></div>
-            </div>
-          </div>
-          <div class="cart-total">
-            <h4>Total: <span class="money">$129.00</span></h4>
-          </div>
-          <div class="cart-checkout-btn">
-            <a class="btn-theme" href="https://template.hasthemes.com/olivine/olivine/shop-cart.html">View Cart</a>
-            <a class="btn-theme" href="https://template.hasthemes.com/olivine/olivine/shop-checkout.html">Checkout</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </aside>
+  
   <!--== End Sidebar Cart Menu ==-->
 
 

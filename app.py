@@ -19,8 +19,6 @@ def login():
         pwd = request.form['pwd']
         print(user)
         print(pwd)
-
-        
         if user=="sadhana" and pwd == "sadhana@123":
             session["name"] = user
             return redirect(url_for('home'))
@@ -96,11 +94,11 @@ def details8():
     return render_template('prod_detail8.html')
 
 
-@app.route('/cart')
+@app.route('/cart',methods=['POST','GET'])
 def cart():
     if not session.get("name"):
         return "Not a valid user"
-
+    
     return render_template('cart.html')
 
 @app.route('/checkout')
@@ -131,6 +129,19 @@ def order():
         return render_template('thankyou.html')
 
     return render_template('thankyou.html')
+
+@app.route('/orders')
+def orders():
+    if not session.get("name"):
+        return "Not a valid user"
+
+    return render_template('orders.html')
+
+
+@app.route('/logout')
+def logout():
+    session.pop("name", None)
+    return redirect(url_for('login'))
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0',port=3000,debug = True)
