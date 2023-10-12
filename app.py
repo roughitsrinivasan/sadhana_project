@@ -9,7 +9,8 @@ Session(app)
 
 @app.route('/')
 def start():
-    return render_template('start.html')
+    return redirect(url_for('login'))
+    # return render_template('start.html')
 
 @app.route('/login', methods=['POST', 'GET'])
 def login():
