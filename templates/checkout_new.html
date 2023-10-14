@@ -230,12 +230,7 @@
 
     let items=JSON.parse(localStorage.getItem('cart'));
     itemPriceTotal=items.reduce((acc,item)=>acc+parseInt(item.price)*item.quantity,0);
-    $(".your-cart-details").append(`<tr>
-        <td class="text-black font-weight-bold">
-          <strong>Cart Subtotal</strong>
-        </td>
-        <td class="text-black">Rs.${itemPriceTotal}</td>
-      </tr>
+    $(".your-cart-details").append(`
       <tr>
           <td class="text-black font-weight-bold">
             <strong>Order Total</strong>
