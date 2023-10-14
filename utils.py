@@ -6,7 +6,8 @@ from email import encoders
 
 
 
-def index(email,username,cur_date,order_id,address,phnNo):
+def index(email,username,cur_date,order_id,address,phnNo,items):
+    print(items)
     try:
         body=f'''
         Subject: Confirmation of Your Hair Products Purchase
@@ -20,6 +21,10 @@ def index(email,username,cur_date,order_id,address,phnNo):
         - Date of Purchase: {cur_date}
         - Address : {address}
         - Contact : {phnNo}
+
+        Purchased Items:
+
+        {items}
 
         Thank you for choosing tres Beaux for your hair care needs. 
         We value your trust and look forward to serving you in the future.

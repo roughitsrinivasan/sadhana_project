@@ -171,9 +171,29 @@
                           <textarea class="form-control textarea" name="con_address" placeholder="Your Address"></textarea>
                         </div>
                       </div>
+                      <input type="hidden" name="items" id="items" value="[]" />
+                      <script type="text/javascript">
+                        document.getElementById('contact-form').onsubmit=function(){
+                          let items=document.getElementById('items');
+                          let cart=JSON.parse(localStorage.getItem('cart'));
+                          console.log(items);
+                          if(cart){
+                          cart=cart.map(item=>({
+                            product:item.product,
+                            quantity:item.quantity,
+                            price:item.price
+                          }));
+                          items.value=JSON.stringify(cart);
+                          console.log(items.value);
+                          localStorage.setItem('backup',JSON.stringify(cart) );
+                          localStorage.setItem('cart',JSON.stringify([]));
+                        }
+
+                      }
+                      </script>
                       <div class="col-md-12">
                         <div class="form-group mb-0">
-                          <button class="btn btn-theme btn-black" type="submit">Place the Order</button>
+                          <button class="btn btn-theme btn-black" type="submit" >Place the Order</button>
                         </div>
                       </div>
                     </div>

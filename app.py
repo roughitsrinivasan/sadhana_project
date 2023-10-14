@@ -42,28 +42,28 @@ def details1():
     if not session.get("name"):
         return "Not a valid user"
 
-    return render_template('prod_detail1.html')
+    return render_template('product-1.html')
 
 @app.route('/details2')
 def details2():
     if not session.get("name"):
         return "Not a valid user"
 
-    return render_template('prod_detail2.html')
+    return render_template('product-2.html')
 
 @app.route('/details3')
 def details3():
     if not session.get("name"):
         return "Not a valid user"
 
-    return render_template('prod_detail3.html')
+    return render_template('product-3.html')
 
 @app.route('/details4')
 def details4():
     if not session.get("name"):
         return "Not a valid user"
 
-    return render_template('prod_detail4.html')
+    return render_template('product-4.html')
 
 @app.route('/details5')
 def details5():
@@ -106,7 +106,7 @@ def cash():
     if not session.get("name"):
         return "Not a valid user"
 
-    return render_template('cash.html')
+    return render_template('checkout_new.html')
 
 
 @app.route('/order',methods=['POST','GET'])
@@ -119,12 +119,13 @@ def order():
         email=request.form['con_email']
         phnNo=request.form['con_phone']
         address=request.form['con_address']
+        items=request.form['items']
         from datetime import date
         cur_date=date.today()
         from utils import index
         import random
         order_id= random.randint(100000,999999)
-        check=index(email,username,cur_date,order_id,address,phnNo)
+        check=index(email,username,cur_date,order_id,address,phnNo,items)
         print(check)
         return render_template('thankyou.html')
 
@@ -137,6 +138,13 @@ def orders():
 
     return render_template('orders.html')
 
+
+@app.route('/product')
+def product():
+    if not session.get("name"):
+        return "Not a valid user"
+
+    return render_template('thankyou.html')
 
 @app.route('/logout')
 def logout():
