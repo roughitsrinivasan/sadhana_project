@@ -212,33 +212,36 @@
     let temp_cart_price = 0;
     let orderDetails="";
 
-    basketitem.map((item,index) => {
-      if (Object.values(item).length > 0) {
-        $(".your-cart-details").append(`                    
-                    <tr>
-                      <td name=${(item.product).split(" ").join("")}>
-                        ${item.product} <strong class="mx-2">x</strong> ${item.quantity}
-                      </td>
-                      <td>$${parseFloat(item.price) * parseFloat(item.quantity)}</td>
-                    </tr>
-                   `)
-        temp_cart_price += parseFloat(item.price) * parseFloat(item.quantity)
-        orderDetails +=`  ${item.product} :- (${item.quantity} items)  $ ${parseFloat(item.price) * parseFloat(item.quantity)} price  & \n`;
-        $("#c_order_details")[0].value = orderDetails;
-      }
-    })
+    // basketitem.map((item,index) => {
+    //   if (Object.values(item).length > 0) {
+    //     $(".your-cart-details").append(`                    
+    //                 <tr>
+    //                   <td name=${(item.product).split(" ").join("")}>
+    //                     ${item.product} <strong class="mx-2">x</strong> ${item.quantity}
+    //                   </td>
+    //                   <td>$${parseFloat(item.price) * parseFloat(item.quantity)}</td>
+    //                 </tr>
+    //                `)
+    //     temp_cart_price += parseFloat(item.price) * parseFloat(item.quantity)
+    //     orderDetails +=`  ${item.product} :- (${item.quantity} items)  $ ${parseFloat(item.price) * parseFloat(item.quantity)} price  & \n`;
+    //     $("#c_order_details")[0].value = orderDetails;
+    //   }
+    // })
+
+    let items=JSON.parse(localStorage.getItem('cart'));
+    itemPriceTotal=items.reduce((acc,item)=>acc+parseInt(item.price)*item.quantity,0);
     $(".your-cart-details").append(`<tr>
         <td class="text-black font-weight-bold">
           <strong>Cart Subtotal</strong>
         </td>
-        <td class="text-black">$${temp_cart_price}</td>
+        <td class="text-black">Rs.${itemPriceTotal}</td>
       </tr>
       <tr>
           <td class="text-black font-weight-bold">
             <strong>Order Total</strong>
         </td>
         <td class="text-black font-weight-bold">
-          <strong>$${temp_cart_price}</strong>
+          <strong>Rs.${itemPriceTotal}</strong>
         </td>
       </tr>`)
 
