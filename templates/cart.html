@@ -276,6 +276,7 @@
         let price=parseInt(index.getElementsByTagName("td")[2].innerHTML.split(".")[1]);
         let total=index.getElementsByTagName("td")[4];
         let qty=e.value;
+        if(e.value=="")return;
         let newtotal=price*qty;
         total.innerHTML=newtotal;
         let items = localStorage.getItem("cart");
