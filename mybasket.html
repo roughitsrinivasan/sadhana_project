@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <title>Tres Beaux</title>
+  <link rel="icon" type="image/png" href="images/tree.png" />
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Ace</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Dosis:500|Raleway:400,600,700&display=swap" rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+
+
+
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+</head>
+
+<body class="sub_page">
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container">
+          <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html"> About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="productsAll.html">Product </a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="mybasket.html"><img src="images/cart.png" /></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+
+  <div class="site-wrap" style="padding-top: 50px;">
+    <div class="bg-light py-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 mb-0">
+            <a href="index.html">Home</a> <span class="mx-2 mb-0">/</span>
+            <strong class="text-black">My Basket</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section" >
+      <div class="container">
+        <div class="row mb-5">
+          <form class="col-md-12" method="post">
+            <div class="site-blocks-table">
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th class="product-thumbnail">Image</th>
+                    <th class="product-name">Product</th>
+                    <th class="product-price">Price</th>
+                    <th class="product-quantity">Quantity</th>
+                    <th class="product-total">Total</th>
+                    <th class="product-remove">Remove</th>
+                  </tr>
+                </thead>
+                <tbody class="my-product-container">
+                </tbody>
+              </table>
+            </div>
+          </form>
+        </div>
+
+        <div class="row cart">
+          <div class="col-md-6 updateCart">
+            <div class="row mb-5">
+              <div class="col-md-6 mb-3 mb-md-0 updateCart">
+                <button class="btn btn-primary btn-sm btn-block" onclick="updatecart()">
+                  Update Cart
+                </button>
+              </div>
+              <div class="col-md-6 updateCart">
+                <button class="btn btn-outline-primary btn-sm btn-block" onclick="continueshopping()">
+                  Continue Shopping
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 pl-5 cart">
+            <div class="row justify-content-end">
+              <div class="" style="flex: 1;">
+                <div class="row">
+                  <div class="col-md-12 text-right border-bottom mb-5">
+                    <h3 class="text-black h4 text-uppercase">Cart Totals</h3>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-md-6">
+                    <span class="text-black">Subtotal</span>
+                  </div>
+                  <div class="col-md-6 text-right">
+                    <strong class="text-black total">₹0</strong>
+                  </div>
+                </div>
+                <div class="row mb-5">
+                  <div class="col-md-6">
+                    <span class="text-black">Total</span>
+                  </div>
+                  <div class="col-md-6 text-right">
+                    <strong class="text-black total">₹0</strong>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-12">
+                    <button class="btn btn-primary btn-lg py-3 btn-block" onclick="window.location='checkout.html'">
+                      Proceed To Checkout
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- info section -->
+  <section class="info_section layout_padding2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="info-logo">
+            <a href="">
+              <img src="images/tres_hair_light.svg" alt="" />
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-3 offset-lg-1">
+          <div class="info-nav">
+            <h4>Navigation</h4>
+            <ul>
+              <li>
+                <a href="index.html"> Home </a>
+              </li>
+              <li>
+                <a href="about.html"> About </a>
+              </li>
+              <li>
+                <a href="productsAll.html"> product </a>
+              </li>
+              <li class="active">
+                <a href="mybasket.html"> MyBasket </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="info-contact">
+            <h4>Contact Info</h4>
+            <div class="location">
+              <h6>Mantain Office Address:</h6>
+              <a href="">
+                <img src="images/location.png" alt="" />
+                <span> kanchipuram </span>
+              </a>
+            </div>
+            <div class="call">
+              <h6>Customer Service:</h6>
+              <a href="">
+                <img src="images/call.png" alt="" />
+                <span> ( +01 1234567890 ) </span>
+              </a>
+            </div>
+            <div class="call">
+              <a href="">
+                <img src="images/mail.png" alt="" />
+                <span> tresbeaux@gmail.com </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__block footer__block--text ">
+          <p class="footer__block-title">Certification</p>
+          <ul class="footer__icon-list">
+            <li>
+              <img
+                src="//cdn.shopify.com/s/files/1/0487/7952/6300/files/GMP_Icon_d4da337c-57c9-4d41-bddc-92c4308658ac.png?v=1614301787">
+            </li>
+            <li>
+              <img src="//cdn.shopify.com/s/files/1/0487/7952/6300/files/ISO_Icon.png?v=1614301787">
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="info_form">
+      <h4>Subscribe</h4>
+      <form action="">
+        <input type="text" placeholder="Enter your email" />
+        <div class="d-flex justify-content-end">
+          <button></button>
+        </div>
+      </form>
+    </div>
+    </div>
+  </section>
+
+  <!-- end info_section -->
+
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.js"></script>
+  <!-- end google map js -->
+
+  <script>
+    $(".slider-for").slick({
+      autoplay: true,
+      autoplaySpeed: 3000,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      fade: true,
+      asNavFor: ".slider-nav",
+    });
+    $(".slider-nav").slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      asNavFor: ".slider-for",
+      dots: true,
+      centerMode: true,
+      focusOnSelect: true,
+    });
+  </script>
+
+  <script>
+    $(".slick-carousel").slick({
+      infinite: true,
+      slidesToShow: 3, // Shows a three slides at a time
+      slidesToScroll: 1, // When you click an arrow, it scrolls 1 slide at a time
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+          },
+        },
+        {
+          breakpoint: 420,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 3,
+          },
+        },
+      ],
+    });
+    function updatecart() {
+      window.location = "productsAll.html"
+    }
+    function continueshopping() {
+      window.location = "index.html"
+    }
+
+  </script>
+
+  <script>
+    let basketitem = [JSON.parse(sessionStorage.getItem("shampoo")) || {}, JSON.parse(sessionStorage.getItem("mask")) || {}, JSON.parse(sessionStorage.getItem("serum")) || {}, JSON.parse(sessionStorage.getItem("oil")) || {},]
+    let itemPriceTotal = 0.0;
+    function removeitem(id) {
+      if (id == 1) { sessionStorage.setItem("shampoo", JSON.stringify({})) }
+      if (id == 2) { sessionStorage.setItem("mask", JSON.stringify({})) }
+      if (id == 3) { sessionStorage.setItem("serum", JSON.stringify({})) }
+      if (id == 4) { sessionStorage.setItem("oil", JSON.stringify({})) }
+      window.location = "/mybasket.html"
+    }
+    function update(id,value) {
+      console.log(id,value);
+      switch(parseInt(id)){
+        case 1:
+          sessionStorage.setItem("shampoo", JSON.stringify({...sessionStorage.getItem("shampoo"),quantity:value}))
+          break;
+          case 2:
+          sessionStorage.setItem("mask", JSON.stringify({...sessionStorage.getItem("mask"),quantity:value}))
+          break;
+          case 3:
+          sessionStorage.setItem("serum", JSON.stringify({...sessionStorage.getItem("serum"),quantity:value}))
+          break;
+          case 4:
+          sessionStorage.setItem("oil", JSON.stringify({...sessionStorage.getItem("oil"),quantity:value}))
+          break;
+        
+      }
+    }
+    basketitem.map((item) => {
+      console.log(itemPriceTotal,parseFloat(item.price) * parseFloat(item.quantity))
+      if (Object.values(item).length > 0) {
+        itemPriceTotal = itemPriceTotal + (parseFloat(item.price) * parseFloat(item.quantity))
+        $(".my-product-container").append(`<tr style="font-family: fangsong ; font-size: 20px;">
+                    <td class="product-thumbnail">
+                      <img src=${item.productImage} alt="Image" class="img-fluid" />
+                    </td>
+                    <td class="product-name">
+                      <h2 class="h5 text-black">${item.product}</h2>
+                    </td>
+                    <td>₹${item.price}</td>
+                    <td style="display: flex; padding: 90px 8px !important; justify-content: center;" >
+                      <div class="input-group mb-3" style="max-width: 135px">
+                        <input type="text" class="form-control text-center" value=${item.quantity} placeholder="" id=${item.id}
+                          aria-label="Example text with button addon" aria-describedby="button-addon1" style="font-size:20px" onkeyup="update(this.id,this.value);" readonly />
+                      </div>
+                    </td>
+                    <td> ₹${parseFloat(item.price) * parseFloat(item.quantity)}</td>
+                    <td><a class="btn btn-primary btn-sm closeBtn" onclick="removeitem(${item.id})">X</a></td>
+                  </tr>`)
+      }
+    })
+    $(".total")[0].innerHTML = `₹${itemPriceTotal}`;
+    $(".total")[1].innerHTML = `₹${itemPriceTotal}`;
+  </script>
+  <script>
+    document.addEventListener("contextmenu", (event) => {
+      event.preventDefault();
+    });
+  </script>
+
+</body>
+
+</html>
